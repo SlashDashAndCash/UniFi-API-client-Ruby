@@ -3,6 +3,7 @@ A Ruby interface to UniFi Controller API. Supported versions 5.x.x.
 Reimplemented from [Unifi Api Client](https://github.com/Art-of-WiFi/UniFi-API-client) written in php.
 
 Follow the fork tree for the original:
+* https://github.com/SlashDashAndCash/UniFi-API-client-Ruby
 * https://github.com/kirpen/unifi
 * https://github.com/zumkorn/unifi
 
@@ -103,6 +104,7 @@ It will return something like that:
 * reconnect_sta
 * rename_ap
 * restart_ap
+* provision_ap
 * revoke_voucher
 * extend_guest_validity
 * set_ap_radiosettings

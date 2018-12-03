@@ -122,6 +122,12 @@ module Unifi
         response.parsed_response
       end
 
+      def provision_ap(mac)
+        body = { cmd: 'force-provision', mac: mac.downcase }
+        response = self.class.post("/s/#{@site}/cmd/devmgr", { body: body.to_json })
+        response.parsed_response
+      end
+
       def stat_sta_sessions_latest(mac, limit = 5)
         body = { mac: mac.downcase, _limit: limit, _sort: '-assoc_time' }
         response = self.class.get("/s/#{@site}/stat/session", { body: body.to_json })
